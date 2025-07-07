@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptual Surveillance Likelihood Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conceptual Surveillance Likelihood Analyzer</h1>
 
+        <div class="camera-feed-container">
+            <video id="videoFeed" autoplay muted playsinline></video>
+            <canvas id="simulationCanvas"></canvas>
+            <div class="overlay">
+                <p><strong>REAR VIEW</strong></p>
+                <div class="scan-line"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="startCameraBtn">Start Camera Feed</button>
+            <button id="startSimulationBtn">Start Simulation</button>
+            <button id="stopBtn">Stop</button>
+        </div>
+
+        <div class="data-panels">
+            <div class="panel statistics-panel">
+                <h2>📊 Conceptual Statistics</h2>
+                <p>Vehicles Detected: <span id="numVehicles">0</span></p>
+                <p>Longest Tracked Duration: <span id="longestTrackedDuration">0s</span></p>
+                <p>Most Frequent Proximity: <span id="mostFrequentProximity">N/A</span></p>
+            </div>
+
+            <div class="panel analysis-panel">
+                <h2>🔍 Conceptual Likelihood Analysis</h2>
+                <p id="analysisOutput">Press "Start Camera Feed" or "Start Simulation" to begin.</p>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <h2>⚠️ Important Disclaimer:</h2>
+            <p>This application is a **conceptual demonstration only**. It **does NOT access your car's specific rear-view camera** and **does NOT provide actual, reliable surveillance detection**. The "vehicles," "statistics," and "likelihood analysis" are based on simplified, illustrative logic within a web browser environment and should **NOT** be used for real-world security assessment. Its purpose is to visualize the *idea* of vehicle tracking and analysis.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
